@@ -12,6 +12,8 @@ Before using this script, make sure you have the following:
 - [x] Spotify Username (SPOTIFY_USERNAME)
 - [x] Spotify Password (SPOTIFY_PASSWORD)
 
+In the Spotidy dev dashboard, make sure to put http://localhost:3000 as your callback URL.
+
 ## Getting Started
 
 1. Clone this repository to your local machine.
