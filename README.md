@@ -40,7 +40,7 @@ If you also want to export the data in CSV format (because why not!), use:
 python script_json_csv.py
 
 🎵 Authentication:
-When you run either script, it will trigger a Chrome tab to open. It will automatically navigate to http://localhost:3000, where you can log in to Spotify to authenticate the script. Don't worry; it will close the tab once it's done! 🚪🔐
+When you run either script, it will trigger a Chrome tab to open. It will automatically navigate to http://localhost:3000, where it will automatically log in to Spotify to authenticate the script. Don't worry; it will close the tab once it's done! 🚪🔐
 
 📄 Output:
 The script will scrape your playlist data and save it in the following folders:
