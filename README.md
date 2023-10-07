@@ -12,7 +12,7 @@ Before using this script, make sure you have the following:
 - [x] Spotify Username (SPOTIFY_USERNAME)
 - [x] Spotify Password (SPOTIFY_PASSWORD)
 
-In the Spotidy dev dashboard, make sure to put http://localhost:3000 as your callback URL.
+In the Spotify dev dashboard, make sure to put http://localhost:3000 as your callback URL.
 
 ## Getting Started
 
