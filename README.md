@@ -41,5 +41,5 @@ The script will scrape your playlist data and save it in the following folders:
 JSON files: playlists/
 CSV files (if using script_json_csv.py): output/
 🎉 Enjoy Your Backed-Up Playlists!
-Now you have your precious Spotify playlists backed up in JSON or CSV format. Enjoy peace of mind knowing your music collection is safe! 🎵✨
+Now you have your precious Spotify playlists backed up in JSON or CSV format. Enjoy peace of mind knowing if spotify goes under because of their shitty choices, u still have these playlists backed up. 🎵✨
 
