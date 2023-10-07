@@ -2,7 +2,7 @@ Enjoy peace of mind knowing if spotify goes under because of their shitty choice
 
 you can set up cron jobs if u want to run this locally and have it backup daily or every hour for more robust automated way to backup your library.
 
-also this will not work with any CICD platform as most CICD / serverless platforms such as lambda with api gatways and git actions does not support selenium and im not sure why because i have it setup as headless but nonetheless ive wasted quite some time to make that happen and it just doesnt work. maybe ill try self host some other CICD platform for further testing but my goal here was to host this in someones cloud, use their free tier and push these playlists to my git repo. :)
+also this will not work with any CICD platform as most CICD / serverless platforms such as lambda with http api gateways and git actions does not support selenium and im not sure why because i have it setup as headless but nonetheless ive wasted quite some time to make that happen and it just doesnt work. maybe ill try self host some other CICD platform for further testing but my goal here was to host this in someones cloud, use their free tier and push these playlists to my git repo. :)
 
 
 # 🎶 Spotify Playlist Backup 📦
