@@ -1,67 +1,43 @@
-![](./docs/banner.jpg)
+# 🎶 Spotify Playlist Backup 📦
 
-Scheduled Python script to backup your personal Spotify playlists incase the platform ever goes down (or you just like having your data).
+This Python script allows you to back up your Spotify playlists' data in both JSON and CSV formats. Simply follow the steps below to get started!
 
-## Environemnt Variables
+## Prerequisites
 
-You can get Spotify `CLIENT_ID` and `CLIENT_SECRET` values from setting up your own [Spotify Developer Application](https://developer.spotify.com/dashboard/applications). Make sure `http://localhost:3000/callback` is set as a Redirect URI.
+Before using this script, make sure you have the following:
 
-![](./docs/spotify-developer-app-dashboard.jpg)
+- [x] A Spotify Developer Account
+- [x] Spotify Client ID (SPOTIFY_CLIENT_ID)
+- [x] Spotify Client Secret (SPOTIFY_CLIENT_SECRET)
+- [x] Spotify Username (SPOTIFY_USERNAME)
+- [x] Spotify Password (SPOTIFY_PASSWORD)
 
+## Getting Started
 
-```
-# .env file
-# Values from your Spotify Developer Application
-SPOTIFY_CLIENT_ID=laboriselitutenimdoculpa
-SPOTIFY_CLIENT_SECRET=laboriselitutenimdoculpa
+1. Clone this repository to your local machine.
 
-# Your Spotify Username
-SPOTIFY_USERNAME=12345678910
+2. Create a copy of `example.env` and rename it to `.env`. Fill in the required Spotify credentials (Client ID, Client Secret, Username, and Password) in the `.env` file.
 
-# Your Spotify Password
-SPOTIFY_PASSWORD=abcdefghijklmnopqrstuvwxyz
+3. Install the necessary Python packages by running:
 
-# Comma separated list of usernames of playlist authors.
-# This allows you to back up other peoples playlists (that you follow) if you want.
-# if left blank, all of your followed/created playlists will be backed up.
-SPOTIFY_OWNER_IDS=snoopdogg,drdre,spotify
-```
+   ```shell
+   pip install -r requirements.txt
 
-## Run the script
+🚀 Usage
+To backup playlist data in JSON format, run:
+python script_json.py
 
-```cmd
-python script.py
-```
+If you also want to export the data in CSV format (because why not!), use:
+python script_json_csv.py
 
-> Under the hood this is running a headless browser to authenticate your user. Once the access token has been fetched, it is then used to query for your playlists and subsequently the tracks within those playlists.
+🎵 Authentication
+When you run either script, it will trigger a Chrome tab to open. It will automatically navigate to http://localhost:3000, where you can log in to Spotify to authenticate the script. Don't worry; it will close the tab once it's done! 🚪🔐
 
-## Github Action Setup
+📄 Output
+The script will scrape your playlist data and save it in the following folders:
 
-Before your Github Action will run successfully, you must setup the above `.env` variables correctly within the repo.
+JSON files: playlists/
+CSV files (if using script_json_csv.py): output/
+🎉 Enjoy Your Backed-Up Playlists!
+Now you have your precious Spotify playlists backed up in JSON or CSV format. Enjoy peace of mind knowing your music collection is safe! 🎵✨
 
-![](./docs/github-actions-secrets-setup.jpg)
-
-Once setup, you can manually run the job via the `Actions` tab.
-
-### Automated CRON Job
-
-By default, the CRON Job Github Action is disabled. To enable this within your repo, open the `.github/workflows/python-app.yml` file and uncomment the schedule code block.
-
-```yaml
-on:
-  # schedule:
-  #   - cron: '0 3 * * 2'
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'
-        required: true
-        default: 'warning' 
-        type: choice
-        options:
-        - info
-        - warning
-        - debug 
-```
-
-> You can use the [crontab](https://crontab.guru/) tool to calculate when and how often you want to run the Github Action.
